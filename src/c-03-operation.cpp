@@ -43,6 +43,9 @@ void test2() {
 	// --值（先减减再赋值）
 	cout << --b << endl;
 
+    // sizeof是获取变量的字节大小
+	cout << (sizeof a) << endl;
+
 	//------------返回0为false，1为true-------------//
     // 判断是否相等
 	cout << (a == b) << endl;
