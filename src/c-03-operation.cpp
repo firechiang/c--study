@@ -9,11 +9,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+#include <string>
 //静态引入<iostream>包下std下的所有依赖
 using namespace std;
 
-// 定义函数头
+// 声名test2()函数
 void test2();
+
+/**
+ * 定义一个数据结构类名字叫Week
+ */
+typedef struct {
+	// 星期日
+	short Sunday = 0;
+	// 星期一
+	short Monday = 1;
+	// 星期二
+	short Tuesday = 2;
+	// 星期三
+	short Wedenesday = 3;
+	// 星期四
+	short Thursday = 4;
+	// 星期五
+	short Friday = 5;
+	// 星期六
+    short Saturday = 6;
+} Week;
+
+Week w;
+
+
 
 int main() {
     test2();
@@ -21,7 +46,9 @@ int main() {
 }
 
 
-// 实现函数
+
+
+// 实现test2()函数
 void test2() {
 	int a=10;
 	int b=20;
@@ -43,8 +70,20 @@ void test2() {
 	// --值（先减减再赋值）
 	cout << --b << endl;
 
+	//---------------------------------------------//
+
     // sizeof是获取变量的字节大小
-	cout << (sizeof a) << endl;
+	cout << sizeof a << endl;
+	// &a是指a变量在内存中的地址（也就是引用地址传递）
+	cout << &a << endl;
+    // *p = &a 是指获取变量a内存地址的值（注意：*var其实就是将获取变量var内存地址的值）
+	int *p = &a;
+	cout << *p << endl;
+	// sizeof是获取变量的字节大小
+	cout << sizeof(w) << endl;
+	// 获取数据结构类的星期六的值
+	cout << w.Saturday << endl;
+
 
 	//------------返回0为false，1为true-------------//
     // 判断是否相等
@@ -92,3 +131,4 @@ void test2() {
     // a = a & b
     a &= b;
 }
+

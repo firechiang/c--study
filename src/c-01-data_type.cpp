@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// 声名test函数
 void test();
 
 /*int main() {
@@ -33,6 +34,7 @@ void test();
 	return EXIT_SUCCESS;
 }*/
 
+// 实现test()函数
 void test() {
 	printf("我是第一个测试程序,我的名字是：%s\n","jiang");
 	// 占1 个字节	-128 到 127 或者 0 到 255
